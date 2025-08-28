@@ -1,0 +1,559 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Bhoomika Portfolio</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="style.css" />
+
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+</head>
+<body>
+
+  <nav>
+    <div class="nav-container">Bhoomika<span> R A</span></div>
+    <ul class="links">
+      <li><a href="#home">HOME</a></li>
+      <li><a href="#about">ABOUT</a></li>
+      <li><a href="#skills">SKILLS</a></li>
+      <li><a href="#project">PROJECT</a></li>
+      <li><a href="#service">SERVICE</a></li>
+      <li><a href="#contact">CONTACT</a></li>
+      <!-- <li><a href="#loginForm">LOGIN</a></li> -->
+    </ul>
+  </nav>
+
+    <div class="menu-icon" id="menuIcon" onclick="toggleMenu(this)">
+    <div class="bar bar1"></div>
+    <div class="bar bar2"></div>
+    <div class="bar bar3"></div>
+  </div>
+
+   <!-- Side menu -->
+  <div id="sideMenu" class="side-menu">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeMenu()">&times;</a>
+    <a href="#home">HOME</a>
+      <a href="#about">ABOUT</a>
+      <a href="#skills">SKILLS</a>
+      <a href="#project">PROJECT</a>
+      <a href="#service">SERVICE</a>
+      <a href="#contact">CONTACT</a>
+  </div>
+
+  <section class="hero" id="home">
+    <div class="hero-text">
+      <h2>Hello, I'm</h2>
+      <h1>BHOOMIKA R A</h1>
+      <div class="typing-text" id="typing"></div>
+      <p>I am currently pursuing my MCA and passionate about website development. I enjoy building simple, beautiful, and user-friendly web projects.</p>
+      <a href="./assets/Bhoomika-R-A_ Resume.pdf" class="resume-btn" download>Download Resume</a>
+    </div>
+    <div class="hero-image">
+      <img src="./assets/bhoomi.jpg" alt="Bhoomika R A" class="profile-pic">
+    </div>
+  </section>
+
+  <!-- about -->
+
+   <section class="about" id="about">
+    <h1>ABOUT ME</h1>
+    <p>
+      A highly motivated BCA graduate from Tumkur University with strong skills in HTML, CSS, and basic Java.<br>
+      Passionate about website development and UI design.<br>
+      Completed a project on a Tourist Travel Website using HTML and CSS.<br>
+      Quick learner with good communication and teamwork skills.<br>
+      Currently pursuing MCA and seeking an entry-level opportunity in web development.
+    </p>
+   </section>
+
+<br><br><br>
+  <!-- skills -->
+  <section id="skills" class="hidden">
+  <h1>My Skills</h1>
+  <div class="skills-grid">
+    <div class="circle" data-skill="80">
+      <img src="./assets/html.png" alt="HTML" />
+      HTML
+      <span class="percent">80%</span>
+    </div>
+    <div class="circle" data-skill="75">
+      <img src="./assets/css1.jpg" alt="CSS" />
+      CSS
+      <span class="percent">75%</span>
+    </div>
+    <div class="circle" data-skill="55">
+      <img src="./assets/js.png" alt="JavaScript" />
+      JavaScript
+      <span class="percent">55%</span>
+    </div>
+    <div class="circle" data-skill="50">
+      <img src="./assets/java.png" alt="Java" />
+      Java
+      <span class="percent">50%</span>
+    </div>
+    <div class="circle" data-skill="50">
+      <img src="./assets/pythons.jpg" alt="Python" />
+      Python
+      <span class="percent">50%</span>
+    </div>
+  </div>
+</section>
+
+  <!-- Success Popup -->
+  <div class="popup" id="popupMsg">Project Opened Successfully!</div>
+
+  <!-- Project Section -->
+
+  <section class="project" id="project"> 
+    <h1>My Projects</h1>
+    <div class="projects-flex">
+      <div class="project-card" id="project-card-1">
+        <div class="project-img" style="background-image: url('./assets/PROJECT.png');"></div>
+        <div>
+          <h2>Tourist Travel Website</h2>
+          <p>
+            A responsive static website that showcases tourist destinations with features like a gallery, booking page, and contact form.
+          </p>
+          <p><strong>Tech Used:</strong> HTML, CSS, JS</p>
+          <a href="./assets/tourist travel project.zip" download>Download Project (.zip)</a>
+          <br>
+          <a href="http://127.0.0.1:5501/HTML/index.html" target="_blank" onclick="showPopup('Project Opened Successfully!')">Open Project Live</a>
+        </div>
+      </div>
+      <div class="project-card" id="project-card-2">
+        <div class="project-img" style="background-image: url('./assets/PORTFOLIO.png');"></div>
+        <div>
+          <h2>Portfolio Website</h2>
+          <p>
+            A responsive static website that showcases of skills, projects, services, and contact form.
+          </p>
+          <p><strong>Tech Used:</strong> HTML, CSS, JS</p>
+          <a href="./assets/BHOOMIKA_PORTFOLIO_.zip" download>Download Project (.zip)</a>
+          <br>
+          <a href="http://127.0.0.1:5500/index.html" target="_blank">Open Project Live</a>
+        </div>
+      </div>
+    </div>
+
+  </section>
+
+   <!-- Popup -->
+  <div class="popup" id="popupMsg">Service Clicked!</div>
+
+  <!-- Services -->
+  <section id="service" class="hidden">
+    <header>
+      <h1>My Services</h1>
+      <p>Here are the services I offer in web development and design.</p>
+    </header>
+    <div class="services-container">
+      <div class="service-card" onclick="showPopup('Website Design')">
+        <h3>Website Design</h3>
+        <p>Modern, responsive designs using HTML, CSS, and JS to craft elegant websites.</p>
+      </div>
+      <div class="service-card" onclick="showPopup('Frontend Development')">
+        <h3>Frontend Development</h3>
+        <p>Building interactive, fast and clean frontends with HTML, CSS, JavaScript.</p>
+      </div>
+      <!-- 
+      <div class="service-card" onclick="showPopup('UI/UX Design')">
+        <h3>UI/UX Design</h3>
+        <p>Designing intuitive and visually appealing user interfaces and flows.</p>
+      </div> -->
+      <div class="service-card" onclick="showPopup('Portfolio Development')">
+        <h3>Portfolio Development</h3>
+        <p>Creating stunning portfolios to showcase your work, skills, and personality.</p>
+      </div>
+    </div>
+  </section>
+
+
+   <!-- Contact Form -->
+ <section class="contact-container" id="contact">
+    <form id="hr-form">
+      <h2>Contact</h2>
+      <input type="text" id="hr_name" name="hr_name" placeholder="Your Name (HR)" required>
+      <input type="text" id="to_name" name="to_name" placeholder="Employee Name" required>
+      <input type="email" id="to_email" name="to_email" placeholder="Employee Email" required>
+      <input type="text" id="subject" name="subject" placeholder="Subject" required>
+      <textarea id="message" name="message" placeholder="Type your message here..." rows="5" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+  </section>
+  
+  <!-- Popup -->
+  <div id="popup">
+    <div id="popup-content">
+      <h3>Sent Successfully!</h3>
+      <p>Thank you for contacting me.</p>
+      <button id="close-popup">Close</button>
+    </div>
+  </div>
+
+    <!-- Popup -->
+  <div class="popup" id="popupMsg">Success!</div>
+
+  <!-- Login Form -->
+  <!-- <section class="container" id="loginForm">
+    <h2>Login</h2>
+    <form  id="login" method="post" >
+      <input type="text" id="loginUser" name="names" placeholder="👤 Username" required>
+      <input type="password" id="loginPass" name="password" placeholder="🔒 Password" required>
+      <button type="submit">Login</button>
+    </form>
+    <p class="toggleText">Don't have an account? <span class="toggle-link" onclick="switchForm('register')">Register</span></p>
+  </section> -->
+
+  <!-- Register Form -->
+  <!-- <section class="container hidden" id="registerForm" >
+    <h2>Register</h2>
+    <form  id="register" method="post">
+      <input type="text" id="regUser" name="name" placeholder="👤 Username" required>
+      <input type="email" id="regEmail" name="email" placeholder="📧 Email" required>
+      <input type="password" id="regPass"  name="pass" placeholder="🔒 Password" required>
+      <input type="password" id="regConfirmPass" name="confirm" placeholder="🔒 Confirm Password" required>
+      <button type="submit">Register</button>
+    </form>
+    <p class="toggleText">Already have an account? <span class="toggle-link" onclick="switchForm('login')">Login</span></p>
+  </section> -->
+
+  <script src="script.js"></script>
+
+  <script>
+    const sideMenu = document.getElementById("sideMenu");
+    const menuIcon = document.getElementById("menuIcon");
+
+    function toggleMenu(icon) {
+      if (sideMenu.style.width === "250px") {
+        closeMenu();
+      } else {
+        openMenu(icon);
+      }
+    }
+
+    function openMenu(icon) {
+      sideMenu.style.width = "250px";
+      icon.classList.add("open");
+    }
+
+    function closeMenu() {
+      sideMenu.style.width = "0";
+      menuIcon.classList.remove("open");
+    }
+  </script>
+  <script>
+  
+  // Typing Text Animation
+  document.addEventListener('DOMContentLoaded', function() {
+    var headings = document.querySelectorAll('.section-heading');
+    function animateHeadings() {
+      headings.forEach(function(heading) {
+        var rect = heading.getBoundingClientRect();
+        var inView = rect.top < window.innerHeight && rect.bottom > 0;
+        if (inView && !heading.classList.contains('animate-section-heading')) {
+          heading.classList.add('animate-section-heading');
+        }
+      });
+    }
+    window.addEventListener('scroll', animateHeadings);
+    animateHeadings();
+
+    // Typing animation
+    const typingElement = document.getElementById("typing");
+    const phrases = ["Frontend Developer", "Web Developer"];
+    let i = 0, j = 0, isDeleting = false;
+
+    function type() {
+      if (!typingElement) return;
+      const currentPhrase = phrases[i];
+      if (isDeleting) {
+        typingElement.textContent = currentPhrase.substring(0, j--);
+        if (j < 0) {
+          isDeleting = false;
+          i = (i + 1) % phrases.length;
+          setTimeout(type, 400);
+          return;
+        }
+      } else {
+        typingElement.textContent = currentPhrase.substring(0, j++);
+        if (j > currentPhrase.length) {
+          isDeleting = true;
+          setTimeout(type, 1000);
+          return;
+        }
+      }
+      setTimeout(type, isDeleting ? 60 : 100);
+    }
+    type();
+  });
+
+// Toggle between Login and Register forms
+function switchForm(form) {
+  const loginSection = document.getElementById('loginForm');
+  const registerSection = document.getElementById('registerForm');
+  if (form === 'register') {
+    loginSection.classList.add('hidden');
+    registerSection.classList.remove('hidden');
+  } else {
+    registerSection.classList.add('hidden');
+    loginSection.classList.remove('hidden');
+  }
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+// Email and Password Validation Functions
+function isValidGmail(email) {
+  return /^[\w.+\-]+@gmail\.com$/.test(email);
+}
+
+function isValidPassword(password) {
+  // At least 1 capital, 1 number, 1 special char, min 6 chars
+  return /[A-Z]/.test(password) && /[0-9]/.test(password) && /[@#$<*&]/.test(password) && password.length >= 6;
+}
+
+// Login Success & Redirect with Validation
+const loginForm = document.getElementById("login");
+loginForm.addEventListener("submit", function (e) {
+  e.preventDefault();
+  const emailOrUser = document.getElementById("loginUser").value;
+  const password = document.getElementById("loginPass").value;
+
+  // If user enters an email, validate as Gmail
+  if (emailOrUser.includes("@")) {
+    if (!isValidGmail(emailOrUser)) {
+      alert("Email must be a valid @gmail.com address.");
+      return;
+    }
+  }
+  if (!isValidPassword(password)) {
+    alert("Password must contain at least 1 capital letter, 1 number, 1 special character (@,#,$,<,*,&) and be at least 6 characters long.");
+    return;
+  }
+
+  showPopup("Login Successful!");
+  loginForm.reset();
+
+  setTimeout(() => {
+    // Show only home section after login
+    const homeSection = document.getElementById('home');
+    const allSections = [
+      document.getElementById('home'),
+      document.getElementById('about'),
+      document.getElementById('skills'),
+      document.getElementById('project'),
+      document.getElementById('service'),
+      document.getElementById('contact'),
+      document.getElementById('loginForm'),
+      document.getElementById('registerForm')
+    ].filter(Boolean);
+    allSections.forEach(sec => {
+      if (sec === homeSection) {
+        sec.classList.remove('hidden');
+      } else {
+        sec.classList.add('hidden');
+      }
+    });
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }, 1500);
+});
+
+// Register Success & Redirect with Validation
+const registerForm = document.getElementById("register");
+registerForm.addEventListener("submit", function (e) {
+  e.preventDefault();
+  const email = document.getElementById("regEmail").value;
+  const pass = document.getElementById("regPass").value;
+  const confirm = document.getElementById("regConfirmPass").value;
+
+  if (!isValidGmail(email)) {
+    alert("Email must be a valid @gmail.com address.");
+    return;
+  }
+  if (!isValidPassword(pass)) {
+    alert("Password must contain at least 1 capital letter, 1 number, 1 special character (@,#,$,<,*,&) and be at least 6 characters long.");
+    return;
+  }
+  if (pass !== confirm) {
+    alert("Passwords do not match!");
+    return;
+  }
+
+  showPopup("Registered Successfully!");
+  registerForm.reset();
+
+  setTimeout(() => {
+    switchForm('login');
+  }, 1500);
+});
+function showPopup(message = "Success!") {
+  const popup = document.getElementById("popupMsg");
+  popup.textContent = message;
+  popup.style.display = "block";
+  popup.classList.add("active");
+
+  setTimeout(() => {
+    popup.style.display = "none";
+    popup.classList.remove("active");
+  }, 2000);
+}
+
+
+
+
+// Skill Progress Animation
+const skillsSection = document.getElementById('skills');
+let skillsAnimated = false;
+window.addEventListener('scroll', () => {
+  const rect = skillsSection.getBoundingClientRect();
+  if (!skillsAnimated && rect.top < window.innerHeight - 100) {
+    animateSkills();
+    skillsAnimated = true;
+  }
+});
+
+function animateSkills() {
+  document.querySelectorAll('.circle').forEach(circle => {
+    const percent = +circle.getAttribute('data-skill');
+    let current = 0;
+    const span = circle.querySelector('.percent');
+    const interval = setInterval(() => {
+      if (current >= percent) clearInterval(interval);
+      else span.textContent = ++current + '%';
+    }, 15);
+  });
+}
+// Project cards animation on load or scroll into view
+document.addEventListener('DOMContentLoaded', function() {
+  function animateProjects() {
+    var card1 = document.getElementById('project-card-1');
+    var card2 = document.getElementById('project-card-2');
+    if (!card1 || !card2) return;
+    var projectSection = document.getElementById('project');
+    var rect = projectSection.getBoundingClientRect();
+    var inView = rect.top < window.innerHeight && rect.bottom > 0;
+    if (inView) {
+      card1.classList.add('slide-in-left');
+      setTimeout(function() {
+        card2.classList.add('slide-in-bottom');
+      }, 250);
+      window.removeEventListener('scroll', animateProjects);
+    }
+  }
+  window.addEventListener('scroll', animateProjects);
+  animateProjects(); // in case already in view
+});
+
+// About heading animation on scroll into view
+document.addEventListener('DOMContentLoaded', function() {
+  var aboutSection = document.querySelector('.about');
+  var aboutHeading = aboutSection ? aboutSection.querySelector('h1') : null;
+  if (!aboutSection || !aboutHeading) return;
+  function animateAboutHeading() {
+    var rect = aboutSection.getBoundingClientRect();
+    var inView = rect.top < window.innerHeight && rect.bottom > 0;
+    if (inView) {
+      aboutHeading.classList.add('animate-about-heading');
+      window.removeEventListener('scroll', animateAboutHeading);
+    }
+  }
+  window.addEventListener('scroll', animateAboutHeading);
+  animateAboutHeading();
+});
+
+// Contact Form Popup (Fake Submission for Demo)
+const contactForm = document.getElementById("contact-form");
+const popup = document.getElementById("popup");
+const closePopupBtn = document.getElementById("close-popup");
+
+contactForm.addEventListener("submit", (e) => {
+  e.preventDefault();
+  popup.style.display = "block";
+  contactForm.reset();
+});
+
+closePopupBtn.addEventListener("click", () => {
+  popup.style.display = "none";
+});
+</script>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  const links = document.querySelectorAll('.links a');
+  const sections = [
+    document.getElementById('home'),
+    document.getElementById('about'),
+    document.getElementById('skills'),
+    document.getElementById('project'),
+    document.getElementById('service'),
+    document.getElementById('contact'),
+    document.getElementById('loginForm'),
+    document.getElementById('registerForm')
+  ].filter(Boolean);
+
+  function showOnlySection(sectionId) {
+    sections.forEach(sec => {
+      if (sec.id === sectionId) {
+        sec.classList.remove('hidden');
+      } else {
+        sec.classList.add('hidden');
+      }
+    });
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+
+  function showAllSections() {
+    sections.forEach(sec => sec.classList.remove('hidden'));
+  }
+
+  links.forEach(link => {
+    link.addEventListener('click', function(e) {
+      const href = this.getAttribute('href');
+      if (href && href.startsWith('#')) {
+        e.preventDefault();
+        const sectionId = href.replace('#', '');
+        if (sectionId === 'home') {
+          showAllSections();
+        } else {
+          showOnlySection(sectionId);
+        }
+      }
+    });
+  });
+
+  // On page load, show all sections
+  showAllSections();
+});
+</script>
+   <script>
+
+   (function () {
+      emailjs.init("0eMpUqCEq_J3tkcgr"); // ✅ Your public key
+    })();
+
+    document.getElementById("hr-form").addEventListener("submit", function(e) {
+      e.preventDefault();
+
+      const templateParams = {
+        to_email: document.getElementById("to_email").value,
+        subject: document.getElementById("subject").value,
+        hr_name: document.getElementById("hr_name").value,
+        to_name: document.getElementById("to_name").value,
+        message: document.getElementById("message").value,
+        time: new Date().toLocaleString()
+      };
+
+      emailjs.send('service_eqr3dpo', 'template_vc8lir8', templateParams)
+        .then(function(response) {
+          alert("✅ Send Message Successfully!");
+          document.getElementById("hr-form").reset();
+        }, function(error) {
+          alert("❌ Failed to send. Error: " + error.text);
+          console.error(error);
+        });
+    });
+  </script>
+</body>
+</html>
